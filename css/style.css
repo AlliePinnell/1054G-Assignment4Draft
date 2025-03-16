@@ -138,30 +138,8 @@ header nav menu li:last-child a::after {
   margin: auto;
   font-weight: bold;
   text-decoration: none;
-  font-size: 5em;
+  font-size: 4em;
   color: #ffffff;
-}
-.button::before{
-  position: absolute;
-  top: 0;
-  left: 0;
-  content:'';
-  display: block;
-  background-color: #ffffff;
-  width: 0.08em;
-  height: 8.8em;
-  box-shadow: 8.8em 0 #ffffff;
-}
-.button::after{
-  position: absolute;
-  top: 0;
-  left: 0;
-  content:'';
-  display: block;
-  background-color: #ffffff;
-  width: 8.88em;
-  height: 0.08em;
-  box-shadow: 0 8.8em #ffffff;
 }
 
 #about{
@@ -231,7 +209,7 @@ header nav menu li:last-child a::after {
   font-size: 5em;
   color: #ffffff;
 }
-.smallButton::before{
+/* .smallButton::before{
   position: absolute;
   top: 0;
   left: 0;
@@ -252,7 +230,7 @@ header nav menu li:last-child a::after {
   width: 9.88em;
   height: 0.08em;
   box-shadow: 0 2.8em #ffffff;
-}
+} */
 
 .contactSection{
   background-color: #5e35b1;

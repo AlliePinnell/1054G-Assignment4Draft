@@ -332,3 +332,44 @@ footer h1{
     flex-direction: column;
   }
 }
+
+
+.arrow{
+  display: flex;
+}
+
+.titleSection .arrow1, .titleSection .arrow1:before{ 
+  position: absolute; 
+  left: 48%; 
+  background-color: rgba(0,0,0,0);
+} 
+
+.titleSection .arrow2, .titleSection .arrow2:before{ 
+  position: absolute; 
+  left: 47%; 
+  background-color: rgba(0,0,0,0);
+} 
+  
+.titleSection .arrow1{
+   width: 75px; 
+   height: 70px;
+   top: 75%; 
+   margin: -10px 0 0 -10px; 
+   border-left: none; 
+   border-top: none; 
+   border-right: none; 
+   border-bottom: 4px #fff solid; 
+   transform: rotate(54deg); 
+  }
+
+.titleSection .arrow2{
+    width: 70px; 
+    height: 77px;
+    top: 75%; 
+    margin: -10px 0 0 -10px; 
+    border-left: none; 
+    border-top: none; 
+    border-right: 4px #fff solid; 
+    border-bottom: none; 
+    transform: rotate(32deg); 
+   }

@@ -4,11 +4,19 @@
   ▪ #0e0e0e (Black) */
 
   @font-face {
-    /* Define custom font for the title */
-    font-family: "Pelita Grande";
-    src: url("../fonts/PelitaGrande.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  /* Define custom font for the title */
+  font-family: "Pelita Grande";
+  src: url("../fonts/PelitaGrande.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  }
+
+  @font-face {
+  /* Define custom font for the title */
+  font-family: "Pelita Grande Mobile";
+  src: url("../fonts/PelitaGrandeMobile.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
   }
 
   html {
@@ -195,13 +203,6 @@
   box-shadow: 0 498px #f4f4f4;
   }
 
-  .button::after, .button2::after{
-  width: 500px;
-  height: 4px;
-  box-shadow: 0 498px #f4f4f4;
-  }
-
-
   #about{
   text-align:center;
   background-color: #072d67;
@@ -344,7 +345,6 @@
   padding-bottom: 2%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
-  width: 94%;
   }
   form .section1 {
   display: flex;
@@ -359,6 +359,12 @@
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
+  }
+  form .section1 input {
+  width: 50%;
+  }
+  form .section2 input, form .section2 textarea {
+  width: 98%;
   }
   footer{
   text-align:center;
@@ -398,94 +404,132 @@
   } 
 
   .titleSection .arrow1{
-    width: 75px; 
-    height: 70px;
-    top: 75%; 
-    margin: -10px 0 0 -10px; 
-    border-left: none; 
-    border-top: none; 
-    border-right: none; 
-    border-bottom: 4px #fff solid; 
-    transform: rotate(54deg); 
+  width: 75px; 
+  height: 70px;
+  top: 75%; 
+  margin: -10px 0 0 -10px; 
+  border-left: none; 
+  border-top: none; 
+  border-right: none; 
+  border-bottom: 4px #fff solid; 
+  transform: rotate(54deg); 
   }
 
   .titleSection .arrow2{
-    width: 70px; 
-    height: 77px;
-    top: 75%; 
-    margin: -10px 0 0 -10px; 
-    border-left: none; 
-    border-top: none; 
-    border-right: 4px #fff solid; 
-    border-bottom: none; 
-    transform: rotate(32deg); 
-    }
+  width: 70px; 
+  height: 77px;
+  top: 75%; 
+  margin: -10px 0 0 -10px; 
+  border-left: none; 
+  border-top: none; 
+  border-right: 4px #fff solid; 
+  border-bottom: none; 
+  transform: rotate(32deg); 
+  }
 
   input::placeholder, textarea::placeholder {
-    color: black;
-    font-weight: bold;
-    font: 1em;
+  color: black;
+  font-weight: bold;
+  font: 1em;
   }
 
   /* Mobile Styles */
   @media only screen and (max-width: 1268px) {
   .mobile-title {
-    display: block;
+  display: block;
   }
   .desktop-title {
-    display: none;
+  display: none;
   }
 
   .titleSection div h1 {
-    font-size: 5em;
+  font-size: 5em;
   }
   .homeButtons{
-    flex-direction: column;
+  flex-direction: column;
   }
 
   .buttons {
-    flex-direction: column;
-    gap: 100px;
+  flex-direction: column;
+  gap: 100px;
   }
 
   footer h1{
-    font-size: 2em;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    font-weight: normal;
+  font-size: 2em;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  font-family: "Pelita Grande Mobile", Arial, Helvetica, sans-serif;
   }
 
   .smallButton, .smallButton2, .smallButton3 {
-    font-weight: normal;
+    font-family: "Pelita Grande Mobile", Arial, Helvetica, sans-serif;
   }
 
   .smallButton::before, .smallButton2::before, .smallButton3::before{
-    width: 4px;
+  width: 4px;
   }
   .smallButton::after, .smallButton2::after, .smallButton3::after{
-    height: 4px;
+  height: 4px;
   }
 
   .button:hover, .button2:hover{
-    background-size: 170vh;
+  background-size: 170vh;
   }
   .button, .button2{
-    background-size: 155vh;
+  background-size: 155vh;
   }
 
   .titleSection .arrow1{
-    width: 45px; 
-    height: 40px;
-    border-bottom: 8px #fff solid; 
-    border-right: 8px #fff solid; 
-    transform: rotate(42deg); 
-    }
+  width: 45px; 
+  height: 40px;
+  border-bottom: 8px #fff solid; 
+  border-right: 8px #fff solid; 
+  transform: rotate(42deg); 
+  }
 
   .titleSection .arrow2{
-      border-right: none;
-    }
+    border-right: none;
+  }
 
-    input::placeholder, textarea::placeholder {
-      opacity: 0; /* Adjusts transparency */
-    }
+  input::placeholder, textarea::placeholder {
+    opacity: 0; /* Adjusts transparency */
+  }
+
+  form .section1 {
+  flex-direction: column;
+  }
+
+  form .section1 input {
+  width: 98%;
+  }
+
+.button, .button2 {
+  width: 75%; /* Keeps the buttons responsive */
+  position: relative; /* Allows pseudo-elements to position properly */
+  font-size: 16px; /* Base font size for relative scaling */
+}
+
+.button::before, .button2::before {
+  content: ''; /* Required for pseudo-elements */
+  width: 4px; /* 0.5% of 16px base font size = 0.08em */
+  height: 31.3em; /* 100% of 16px base font size = 6.25em */
+  background-color: #f4f4f4; /* Adjust as needed */
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 52.5em 0 #f4f4f4; /* 141px / 16 = 8.81em */
+}
+
+.button::after, .button2::after {
+  content: '';
+  width: 52.5em; /* 100% of 16px base font size = 6.25em */
+  height: 4px; /* 0.5% of 16px base font size = 0.08em */
+  background-color: #f4f4f4; /* Adjust as needed */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+
   }
